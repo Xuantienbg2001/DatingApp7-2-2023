@@ -5,15 +5,15 @@
                 <ng-container *ngIf="accountService.currentUser$ | async">
                 <li class="nav-item">
                   <a class="nav-link" routerLink="/members" routerLinkActive="active">Matches</a>
-                </li>
+               </li>
                 <li class="nav-item">
                   <a class="nav-link" routerLink="/lists"  routerLinkActive="active">Lists</a>
                 </li>
-                <li class="nav-item"> 
+                <li class="nav-item">
                   <a class="nav-link" routerLink="/messages"  routerLinkActive="active">Messenges</a>
                 </li>
                 </ng-container>
-                 <li class="nav-item"> 
+                 <li class="nav-item">
                   <a class="nav-link" routerLink='/errors'  routerLinkActive="active">Errors</a>
                 </li>
               </ul>
@@ -35,17 +35,17 @@
 
 
               <form *ngIf="(accountService.currentUser$ | async) === null" #loginForm="ngForm" class="d-flex" (ngSubmit)="login()" autocomplete="off">
-                <input 
+                <input
                 name = "username"
                 [(ngModel)]="model.username"
-                class="form-control me-2" 
-                type="text" 
+                class="form-control me-2"
+                type="text"
                 placeholder="Username">
-                 <input 
+                 <input
                   name = "password"
                   [(ngModel)]="model.password"
-                  class="form-control me-2" 
-                  type="password" 
+                  class="form-control me-2"
+                  type="password"
                   placeholder="Password">
                 <button class="btn btn-success" type="submit">Login </button>
               </form>

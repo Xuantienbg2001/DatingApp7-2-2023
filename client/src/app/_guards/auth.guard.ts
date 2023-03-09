@@ -15,16 +15,14 @@ export class AuthGuard implements CanActivate {
     throw new Error('Method not implemented.');
   }
  
-  canActivate(): Observable<boolean|undefined>{
+  canActivate(): Observable<boolean>{
     return this.accountService.currentUser$.pipe(
       map((user) => {
         if (user) return true;
-        else {
           this.toastr.error('You shall not pass!')
           return false;
-        }
       })
     )
   }
-  
+
 }

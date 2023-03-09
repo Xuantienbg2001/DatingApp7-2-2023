@@ -1,11 +1,11 @@
 
 
 <ng-container >
-       <button (click)="get500Errors()" class="btn btn-outline-primary mr-3">Test 500 Error</button>
-       <button (click)="get400Errors()" class="btn btn-outline-primary mr-3">Test 400 Error</button>
-       <button (click)="get401Errors()" class="btn btn-outline-primary mr-3">Test 401 Error</button>
-       <button (click)="get404Errors()" class="btn btn-outline-primary mr-3">Test 404 Error</button>
-       <button (click)="get400ValidationError()" class="btn btn-outline-primary mr-3">
+       <button (click)="get500Errors()" class="btn btn-outline-primary mr-3"  style="margin-left: 10px;">Test 500 Error</button>
+       <button (click)="get400Errors()" class="btn btn-outline-primary mr-3"  style="margin-left: 10px;">Test 400 Error</button>
+       <button (click)="get401Errors()" class="btn btn-outline-primary mr-3" style="margin-left: 10px;">Test 401 Error</button>
+       <button (click)="get404Errors()" class="btn btn-outline-primary mr-3" style="margin-left: 10px;">Test 404 Error</button>
+       <button (click)="get400ValidationError()" class="btn btn-outline-primary mr-3" style="margin-left: 10px;">
               Test 400 Validation Error</button>
 
         <div class="row mt-5" *ngIf="validationErrors.length > 0">
@@ -14,5 +14,5 @@
                             {{error}}
                      </li>
               </ul>
-        </div>       
+        </div>
 </ng-container>

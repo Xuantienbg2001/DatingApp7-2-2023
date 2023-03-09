@@ -12,7 +12,7 @@ export class AccountService {
    baseUrl = 'https:///localhost:5001/api/';
    private currenUserSource = new ReplaySubject<User>(1)
    currentUser$ = this.currenUserSource.asObservable();
-   
+
   constructor(private http: HttpClient) { }
 
   login(model: any) {
@@ -25,7 +25,7 @@ export class AccountService {
          }
       })
     )
-  } 
+  }
 
   register(model: any) {
     return this.http.post<User>(this.baseUrl + 'account/register', model).pipe(
@@ -37,10 +37,12 @@ export class AccountService {
       })
     )
   }
+
     setCurrentUser(user: User) {
       this.currenUserSource.next(user);
     }
-    logout() { 
+    
+    logout() {
       localStorage.removeItem('user');
       this.currenUserSource.next(null!);
     }
